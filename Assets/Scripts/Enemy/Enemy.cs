@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Enemy : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
         {
             //disable enemy
             anim.SetBool("dead", true);
-            GetComponent<Rigidbody2D>().gravityScale = 0;
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             GetComponent<BoxCollider2D>().enabled = false;
             Debug.Log("Enemy died");
             this.enabled= false;
