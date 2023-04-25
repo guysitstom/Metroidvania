@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1420033789761807292}
   - component: {fileID: 1420033789761807295}
   - component: {fileID: 1420033789761807294}
+  - component: {fileID: 4314155510330595866}
+  - component: {fileID: 8287887707539655676}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -193,6 +195,33 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   damage: 5
+--- !u!114 &4314155510330595866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420033789761807287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c88ce72495b3f4b90da12d4e205b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colectsound: {fileID: 0}
+--- !u!114 &8287887707539655676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420033789761807287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b5a4dc52418714482d6f26be592cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  anim: {fileID: 1420033789761807280}
 --- !u!1 &1420033789805335710
 GameObject:
   m_ObjectHideFlags: 0

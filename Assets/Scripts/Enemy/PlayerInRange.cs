@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerInRange : MonoBehaviour
 {
     [SerializeField] private GameObject alert;
+    public AudioSource alertSound;
+
+ 
     public Transform EnemyMidPoint;
     public float SightRange = 0.5f;
     public LayerMask PlayerLayer;
@@ -20,6 +23,7 @@ public class PlayerInRange : MonoBehaviour
                 alert.SetActive(true);
                 alerted = true;
                 GetComponent<Enemy_Flip>().LookAtPlayer();
+                alertSound.Play();
                 StartCoroutine( Wait());
                 
             }
