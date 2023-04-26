@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemCollecter : MonoBehaviour
 {
     public AudioSource colectsound;
+ 
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +13,7 @@ public class ItemCollecter : MonoBehaviour
         {
             Destroy(collision.gameObject);
             colectsound.Play();
+          
         }
     }
 

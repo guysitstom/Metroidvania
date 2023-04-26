@@ -15,7 +15,9 @@ public class PlayerInRange : MonoBehaviour
     private bool alerted= false;
     void Update()
     {
+
         Collider2D[] PlayerDetected = Physics2D.OverlapCircleAll(EnemyMidPoint.position, SightRange, PlayerLayer);
+        
         foreach (Collider2D enemy in PlayerDetected)
         {
             if (!alerted)

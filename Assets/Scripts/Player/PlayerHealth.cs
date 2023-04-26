@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    public string sceneName;
     public int maxHealth = 6;
     public int currentHealth;
+    public GameObject Player;
+    public bool Dead = false;
 
     public Animator anim;
+    public Animator animator;
 
     private void Start()
     {
@@ -19,46 +22,46 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        StartCoroutine(DamageAnimation());
-
+        anim.SetTrigger("hurt");
         if (currentHealth <= 0)
         {
-            anim.SetBool("death", true);
-            Invoke("Die", 2f);
+            Death();
         }
     }
-
-    void Die()
+    public void Death()
     {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        animator.SetBool("inRange", false);
+        Dead = true;
+        //disable enemy
+        anim.SetBool("death", true);
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<PlayerCombat>().enabled = false;
+        Invoke("DisableAnim", 1);
+        Debug.Log("Enemy died");
+        Player.tag = "Untagged";
+        LayerMask.NameToLayer("Default");
+        Invoke("DieScene", 2);
     }
 
-    IEnumerator DamageAnimation()
+    void DieScene()
     {
-        SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
-
-        for (int i = 0; i < 3; i++)
+        SceneManager.LoadScene(sceneName);
+    }
+    private void DisableAnim()
+    {
+        anim.enabled = false;
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Healing"))
         {
-            foreach (SpriteRenderer sr in srs)
-            {
-                Color c = sr.color;
-                c.a = 0;
-                sr.color = c;
-            }
-
-            yield return new WaitForSeconds(.1f);
-
-            foreach (SpriteRenderer sr in srs)
-            {
-                Color c = sr.color;
-                c.a = 1;
-                sr.color = c;
-            }
-
-            yield return new WaitForSeconds(.1f);
+            currentHealth = maxHealth;
         }
     }
+
+
 
 }

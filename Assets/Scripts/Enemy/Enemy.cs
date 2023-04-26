@@ -30,5 +30,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemy died");
             this.enabled= false;
         }
+        
     }
 }

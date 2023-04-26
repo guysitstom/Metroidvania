@@ -22,6 +22,7 @@ public class BossWeapon : MonoBehaviour
         if (colInfo != null)
         {
             colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            Debug.Log("Player detected");
         }
     }
 
