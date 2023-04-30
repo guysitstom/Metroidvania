@@ -220,8 +220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b5a4dc52418714482d6f26be592cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
+  sceneName: 
+  maxHealth: 6
+  currentHealth: 0
+  Player: {fileID: 0}
+  Dead: 0
   anim: {fileID: 1420033789761807280}
+  animator: {fileID: 0}
 --- !u!1 &1420033789805335710
 GameObject:
   m_ObjectHideFlags: 0
