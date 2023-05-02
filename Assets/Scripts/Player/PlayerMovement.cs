@@ -17,6 +17,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
+    [Header("Dashing")]
+    [SerializeField] TrailRenderer trailRenderer;
+    [SerializeField] private float dashSpeed = 14f;
+    [SerializeField] private float dashTime = 0.5f;
+    private Vector2 dashDir;
+    private bool isDashing;
+    private bool canDash;
     private enum MovementState { idle, running, jumping, falling }
 
     //[SerializeField] private AudioSource jumpsound;
@@ -28,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+        trailRenderer= GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -35,8 +43,19 @@ public class PlayerMovement : MonoBehaviour
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        var dashInput = Input.GetButtonDown("Dash");
 
+        if (dashInput && canDash)
+        {
+            isDashing= true;
+            canDash= false;
+            trailRenderer.emitting = true;
+            dashDir = new Vector2(dirX, Input.GetAxisRaw("Vertical"));
+            if (dashDir == Vector2.zero)
+            {
 
+            }
+        }
         if (Input.GetButtonDown("Jump") && Grounded() == true)
         {
             //jumpsound.Play();

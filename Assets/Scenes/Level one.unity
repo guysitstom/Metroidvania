@@ -19479,11 +19479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 53626765092087234, guid: cb0f48f3228d29947bc9381c8ca169b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.16
+      value: 32.5
       objectReference: {fileID: 0}
     - target: {fileID: 53626765092087234, guid: cb0f48f3228d29947bc9381c8ca169b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.220289
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 53626765092087234, guid: cb0f48f3228d29947bc9381c8ca169b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21366,6 +21366,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1637935097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637935080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b19e6dfb46e23746815c189eb8e8c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entrance: {fileID: 1726581007}
+  exit: {fileID: 708541105}
+  sceneInfo: {fileID: 11400000, guid: 47136f1593e8be14ba8f0777dbe40a57, type: 2}
+  offsetEntrance: {x: 1, y: 0.5, z: 0}
+  offsetExit: {x: -1, y: 0.5, z: 0}
 --- !u!1 &1674425772
 GameObject:
   m_ObjectHideFlags: 0
