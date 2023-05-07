@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashTime = 0.5f;
     private Vector2 dashDir;
     private bool isDashing;
-    private bool canDash;
+    private bool canDash = true;
     private enum MovementState { idle, running, jumping, falling }
 
     //[SerializeField] private AudioSource jumpsound;
@@ -47,14 +47,31 @@ public class PlayerMovement : MonoBehaviour
 
         if (dashInput && canDash)
         {
+            
             isDashing= true;
             canDash= false;
             trailRenderer.emitting = true;
             dashDir = new Vector2(dirX, Input.GetAxisRaw("Vertical"));
             if (dashDir == Vector2.zero)
             {
-
+                dashDir = new Vector2(transform.localScale.x, 0);
             }
+            if (isDashing)
+            {
+                rb.velocity = dashDir.normalized * dashSpeed;
+                
+            }
+
+            
+            Debug.Log("dash anim");
+            anim.SetBool("dash", isDashing);
+            
+            StartCoroutine(StopDashing());
+            
+        }
+        if (Grounded())
+        {
+            canDash = true;
         }
         if (Input.GetButtonDown("Jump") && Grounded() == true)
         {
@@ -93,6 +110,15 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.falling;
         }
         anim.SetInteger("state", (int)state);
+    }
+    private IEnumerator StopDashing() 
+    {
+        
+        yield return new WaitForSeconds(dashTime);
+        trailRenderer.emitting= false;
+        isDashing = false;
+        anim.SetBool("dash", isDashing);
+        Debug.Log("Stop Dash");
     }
     private bool Grounded()
     {
