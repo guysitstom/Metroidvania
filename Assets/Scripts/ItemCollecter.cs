@@ -5,8 +5,8 @@ using UnityEngine;
 public class ItemCollecter : MonoBehaviour
 {
     public AudioSource colectsound;
- 
-   
+    public bool HasDash = true;
+    [SerializeField] public HasDash Dash;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Healing"))
@@ -14,6 +14,11 @@ public class ItemCollecter : MonoBehaviour
             Destroy(collision.gameObject);
             colectsound.Play();
           
+        }
+        else if (collision.gameObject.CompareTag("DashUnlock"))
+        {
+            Destroy(collision.gameObject);
+            Dash.hasDash = HasDash;
         }
     }
 

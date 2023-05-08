@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 14f;
 
     [Header("Dashing")]
+    [SerializeField] public HasDash Dash;
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] private float dashSpeed = 14f;
     [SerializeField] private float dashTime = 0.5f;
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
         var dashInput = Input.GetButtonDown("Dash");
 
-        if (dashInput && canDash)
+        if (dashInput && canDash && Dash.hasDash)
         {
             
             isDashing= true;

@@ -100,6 +100,10 @@ MonoBehaviour:
     m_Bits: 8
   moveSpeed: 4
   jumpForce: 10
+  Dash: {fileID: 0}
+  trailRenderer: {fileID: 0}
+  dashSpeed: 14
+  dashTime: 0.5
 --- !u!212 &1420033789761807292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -210,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colectsound: {fileID: 0}
+  HasDash: 1
+  Dash: {fileID: 0}
 --- !u!114 &8287887707539655676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +231,7 @@ MonoBehaviour:
   sceneName: 
   maxHealth: 6
   currentHealth: 0
-  Player: {fileID: 0}
+  Player: {fileID: 1420033789761807287}
   Dead: 0
   anim: {fileID: 1420033789761807280}
   animator: {fileID: 0}
