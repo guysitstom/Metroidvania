@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76c7dc74a33ec74eb1a56b1ae9cfc96, type: 3}
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
-  isNextScene: 1
+  isNextScene: 0

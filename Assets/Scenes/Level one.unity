@@ -17883,6 +17883,8 @@ GameObject:
   m_Component:
   - component: {fileID: 708541107}
   - component: {fileID: 708541106}
+  - component: {fileID: 708541109}
+  - component: {fileID: 708541108}
   m_Layer: 0
   m_Name: Exit normal
   m_TagString: Untagged
@@ -17950,13 +17952,55 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708541105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.05, y: 4.02, z: 0}
+  m_LocalPosition: {x: 66.52, y: 4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &708541108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708541105}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.49564433}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.8924603}
+  m_EdgeRadius: 0
+--- !u!114 &708541109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708541105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eca76cdc5e7a347be6667a0e7ef072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level two
+  isNextScene: 1
+  Player: {fileID: 1637935080}
+  sceneInfo: {fileID: 11400000, guid: 47136f1593e8be14ba8f0777dbe40a57, type: 2}
 --- !u!1 &714045930
 GameObject:
   m_ObjectHideFlags: 0
@@ -22995,6 +23039,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1858027986}
   - component: {fileID: 1858027985}
+  - component: {fileID: 1858027988}
+  - component: {fileID: 1858027987}
   m_Layer: 0
   m_Name: Exit Boss
   m_TagString: Untagged
@@ -23062,13 +23108,55 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858027984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.25, y: 13.25, z: 0}
+  m_LocalPosition: {x: 62.6, y: 13.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858027987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858027984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eca76cdc5e7a347be6667a0e7ef072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Final Level
+  isNextScene: 1
+  Player: {fileID: 1637935080}
+  sceneInfo: {fileID: 11400000, guid: 47136f1593e8be14ba8f0777dbe40a57, type: 2}
+--- !u!61 &1858027988
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858027984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.27995157}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.8727808}
+  m_EdgeRadius: 0
 --- !u!1 &2003612113
 GameObject:
   m_ObjectHideFlags: 0
@@ -47331,6 +47419,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1420033789761807282, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
+      propertyPath: Dash
+      value: 
+      objectReference: {fileID: 11400000, guid: 34ae305b3af822f47a3b740a6531a8cf, type: 2}
+    - target: {fileID: 1420033789761807282, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
       propertyPath: dashTime
       value: 0.5
       objectReference: {fileID: 0}
@@ -47394,6 +47486,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 6b78bd0320b3423418ac2250fdfcc1d1, type: 2}
+    - target: {fileID: 4314155510330595866, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
+      propertyPath: Dash
+      value: 
+      objectReference: {fileID: 11400000, guid: 34ae305b3af822f47a3b740a6531a8cf, type: 2}
     - target: {fileID: 4314155510330595866, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
       propertyPath: colectsound
       value: 

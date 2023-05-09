@@ -100,8 +100,8 @@ MonoBehaviour:
     m_Bits: 8
   moveSpeed: 4
   jumpForce: 10
-  Dash: {fileID: 0}
-  trailRenderer: {fileID: 0}
+  Dash: {fileID: 11400000, guid: 34ae305b3af822f47a3b740a6531a8cf, type: 2}
+  trailRenderer: {fileID: 5363250538951890524}
   dashSpeed: 14
   dashTime: 0.5
 --- !u!212 &1420033789761807292
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colectsound: {fileID: 0}
   HasDash: 1
-  Dash: {fileID: 0}
+  Dash: {fileID: 11400000, guid: 34ae305b3af822f47a3b740a6531a8cf, type: 2}
 --- !u!114 &8287887707539655676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b5a4dc52418714482d6f26be592cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Game over
   maxHealth: 6
   currentHealth: 0
   Player: {fileID: 1420033789761807287}
