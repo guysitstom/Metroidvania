@@ -12,7 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public bool Dead = false;
 
     public Animator anim;
-    public Animator animator;
+    
+    public Animator[] animators;
 
     private void Start()
     {
@@ -30,7 +31,11 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Death()
     {
-        animator.SetBool("inRange", false);
+        for (int i = 0; i < animators.Length; i++)
+        {
+            animators[i].SetBool("inRange", false);
+        } 
+        
         Dead = true;
         //disable enemy
         anim.SetBool("death", true);

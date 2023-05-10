@@ -23,7 +23,7 @@ public class PlayerCombat : MonoBehaviour
         }
         
     }
-    void Attack()
+    void Attacks()
     {
         anim.SetTrigger("attack");
 
@@ -42,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator wait()
     {
-        Attack();
+        Attacks();
         coolDown = true;
         yield return new WaitForSeconds(1);
         coolDown = false;

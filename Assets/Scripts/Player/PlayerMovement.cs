@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] private float dashSpeed = 14f;
     [SerializeField] private float dashTime = 0.5f;
+    [SerializeField] AudioSource dash;
     private Vector2 dashDir;
     private bool isDashing;
     private bool canDash = true;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
         trailRenderer= GetComponent<TrailRenderer>();
+        dash= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 
             }
 
-            
+            dash.Play();
             Debug.Log("dash anim");
             anim.SetBool("dash", isDashing);
             

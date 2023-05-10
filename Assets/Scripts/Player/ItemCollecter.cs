@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class ItemCollecter : MonoBehaviour
         {
             Destroy(collision.gameObject);
             colectsound.Play();
-          
+            Debug.Log("Sound Played");
         }
         else if (collision.gameObject.CompareTag("DashUnlock"))
         {

@@ -6,13 +6,16 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
     public Animator anim;
+    
     void Start()
     {
         currentHealth = maxHealth;
+        
     }
 
+  
     public void TakeDamge(int damage)
     {
         currentHealth -= damage;
