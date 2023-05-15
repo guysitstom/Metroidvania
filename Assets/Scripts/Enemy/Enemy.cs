@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public Animator anim;
-    
+    [SerializeField] Animator Gate;
     void Start()
     {
         currentHealth = maxHealth;
@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             Debug.Log("Enemy died");
             this.enabled= false;
+            Gate.SetTrigger("Open");
         }
         
     }

@@ -18004,8 +18004,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Level two
   isNextScene: 1
+  isBossScene: 0
   Player: {fileID: 1004200374}
   sceneInfo: {fileID: 11400000, guid: 47136f1593e8be14ba8f0777dbe40a57, type: 2}
+  bossLevel: {fileID: 11400000, guid: babcf61990b04164da05f949443d9930, type: 2}
 --- !u!1 &714045930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18291,9 +18293,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 708541105}
     - target: {fileID: 5737332451414259598, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
+      propertyPath: BossExit
+      value: 
+      objectReference: {fileID: 1858027984}
+    - target: {fileID: 5737332451414259598, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
       propertyPath: entrance
       value: 
       objectReference: {fileID: 1726581007}
+    - target: {fileID: 5737332451414259598, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
+      propertyPath: bossLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: babcf61990b04164da05f949443d9930, type: 2}
     - target: {fileID: 5737332451414259598, guid: c62d7ba49d38f3d48957ed41ce5d26b1, type: 3}
       propertyPath: offsetExit.x
       value: -1
@@ -23107,8 +23117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Final Level
   isNextScene: 1
+  isBossScene: 0
   Player: {fileID: 1004200374}
   sceneInfo: {fileID: 11400000, guid: 47136f1593e8be14ba8f0777dbe40a57, type: 2}
+  bossLevel: {fileID: 11400000, guid: babcf61990b04164da05f949443d9930, type: 2}
 --- !u!61 &1858027988
 BoxCollider2D:
   m_ObjectHideFlags: 0

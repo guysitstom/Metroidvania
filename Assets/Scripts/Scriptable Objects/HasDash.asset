@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cf4da9b85232c42b6df0b665d2387d, type: 3}
   m_Name: HasDash
   m_EditorClassIdentifier: 
-  hasDash: 0
+  hasDash: 1

@@ -9,7 +9,10 @@ public class OnEnterLevel : MonoBehaviour
 {
     public GameObject entrance;
     public GameObject exit;
+    public GameObject BossExit;
+    GameObject tag;
 
+    [SerializeField] public BossLevel bossLevel;
     [SerializeField] public SceneInfo sceneInfo;
 
     public Vector3 offsetEntrance = new Vector3(1f, 0.5f, 0);
@@ -22,9 +25,23 @@ public class OnEnterLevel : MonoBehaviour
     }
     void Start()
     {
-        GameObject target = sceneInfo.isNextScene ? entrance : exit;
+
+
         Vector3 offset = sceneInfo.isNextScene ? offsetEntrance : offsetExit;
-        body.position = target.transform.position + offset;
+
+        if (bossLevel.isBossScene  == true)
+        {
+           tag=BossExit;
+            body.position = tag.transform.position + offset;
+            
+        }
+        else
+        {
+            GameObject target = sceneInfo.isNextScene ? entrance : exit;
+
+            body.position = target.transform.position + offset;
+        }
+       
     }
 
 
