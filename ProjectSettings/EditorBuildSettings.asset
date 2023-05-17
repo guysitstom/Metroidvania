@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Card.unity
+    guid: cb76fc2225a158348a56e3c47d35aad0
+  - enabled: 1
     path: Assets/Scenes/Level one.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -17,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game over.unity
     guid: dc6e618ab88212741bf803484ebda260
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: adc2971a678362648870bf6aa34b34c4
+  - enabled: 1
+    path: Assets/Scenes/End Scene.unity
+    guid: e1ccc416c85817246a2f68b17ae6529b
+  - enabled: 1
+    path: Assets/Scenes/Game over 1.unity
+    guid: c5917505080fe4a4e87a36c0f4c64f6b
   m_configObjects: {}

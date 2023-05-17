@@ -940,6 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d2c7704eeccce4799c060f3f842bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasDash: {fileID: 11400000, guid: 34ae305b3af822f47a3b740a6531a8cf, type: 2}
 --- !u!114 &1935543178
 MonoBehaviour:
   m_ObjectHideFlags: 0
