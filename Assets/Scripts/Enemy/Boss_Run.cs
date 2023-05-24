@@ -30,7 +30,7 @@ public class Boss_Run : StateMachineBehaviour
 
             flip.LookAtPlayer();
         
-            Vector2 target = new Vector2(player.position.x, rb.position.y);
+            Vector2 target = new Vector2(player.position.x, rb.position.y-3);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
             rb.MovePosition(newPos);
